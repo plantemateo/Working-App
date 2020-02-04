@@ -26,7 +26,6 @@ input{
 .fondoFlechas {
   background-image: url(images/flechFondo.png);
   background-repeat: no-repeat;
-
 }
 
 .fondoFlechas2 {
@@ -95,7 +94,7 @@ body.ng-scope #boardMembersModal .member-section .leave-space div.member a:focus
 
 .navbar-default {
   background-color: #3A61C5;
-  border: 0px;
+  border:0px;
   border-radius: 0px;
   min-height: 20px;
   height: 40px;
@@ -206,6 +205,7 @@ div.ng-scope #sidebar-wrapper {
   -moz-transition: all 0.5s ease-in 0s;
   -ms-transition: all 0.5s ease-in 0s;
   -o-transition: all 0.5s ease-in 0s;
+  border: 2px inset #7f8c8d;"
 }
 
 div.ng-scope #sidebar-wrapper.active {
@@ -509,6 +509,7 @@ div.ng-scope div#lists-view .list .new-list {
   font-weight: bold;
   width: 100%;
   box-shadow: 3px 3px 1px #34495e;
+  border: 1px inset #7f8c8d;
 }
 
 div.ng-scope div#lists-view .list .new-list:hover {
