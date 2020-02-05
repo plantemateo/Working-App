@@ -11,8 +11,9 @@
     <div class="modal-body">
         <!-- Miembros -->
         <div class="leave-space members-section">
-            <div class="members-title">
-                Miembros asignados
+            <div style="font-size: 20px" class="members-title">
+ 			<i class="fa fa-users"></i>
+ 			Miembros asignados
             </div>
             <span class="member" ng-repeat="member in tarjeta.miembrosAsignados"
                 uib-popover-template="membersPopoverTemplateUrl" popover-trigger="'outsideClick'"
@@ -27,7 +28,7 @@
 
         <!-- Descripcion -->
         <div class="description-title">
-            <i class="fa fa-align-left"></i>
+            <i class="fa fa-cog"></i>
             Descripción
         </div>
         <div class="leave-space body" ng-class="{'body-empty': tarjeta.cuerpo == ''}">
@@ -36,7 +37,7 @@
                 <div ng-hide="tarjeta.cuerpo == ''">
                     <pre>{{tarjeta.cuerpo}}</pre>
                 </div>
-                <div ng-show="tarjeta.cuerpo == ''">Añadir una descripción más detallada...</div>
+                <div style="color: black;" ng-show="tarjeta.cuerpo == ''">Añadir una descripción más detallada...</div>
             </div>
             <!-- Editando descripcion -->
             <div ng-show="editingCardBody" class="edit-multiline-btn">
@@ -49,13 +50,13 @@
         </div>
         <!-- Comentarios -->
         <div style="font-size: 20px;">
-            <i class="fa fa-comments"></i>
+            <i class="fa fa-commenting"></i>
             Comentarios
         </div>
         <div class="leave-space comment-section">
             <!-- Comentario nuevo -->
             <div class="well well-sm comment new-comment">
-                <div ng-hide="makeNewComment || newComment != ''" ng-click="makeNewComment = true">
+                <div ng-hide="makeNewComment || newComment != ''" ng-click="makeNewComment = true" style="color: black;">
                     Escriba un comentario...
                 </div>
                 <div ng-show="makeNewComment || newComment != ''">
@@ -63,14 +64,13 @@
                         ng-blur="makeNewComment = false" ng-focus="makeNewComment = true" autofocus></textarea>
                     <br>
                     <button ng-disabled="newComment == ''" class="btn btn-sm btn-block btn-success" style="width: auto;"
-                        ng-click="addComment()">Guardar</button>
-                    
+                        ng-click="addComment()">Guardar</button>                
                 </div>
             </div>
             <!-- Comentarios ya puestos -->
             <div ng-repeat="com in comentarios">
-                <strong>{{com.creadoPor.username}}</strong>
-                <em> {{timeSince(com.fechaCreacion)}}</em>
+                <strong>{{com.creadoPor.username}}:</strong>
+                <em>{{timeSince(com.fechaCreacion)}}</em>
                 <br>
                 <div class="comment">
                     <div ng-hide="editingComment(com)">

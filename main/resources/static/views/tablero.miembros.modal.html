@@ -1,6 +1,6 @@
 <div style="border: 3px inset #7f8c8d;">
 <div class="modal-header" >
-    <button type="button" class="btn btn-sm btn-success pull-right" ng-click="done()"><i
+    <button style="box-shadow: 2px 2px 1px #34495e;" type="button" class="btn btn-sm btn-danger pull-right" ng-click="done()"><i
             class="fa fa-close"></i></button>
     <h3 class="modal-title" style="font-style: italic;">Miembros del tablero</h3>
 </div>
@@ -12,10 +12,11 @@
             </p>
             <label class="col-md-2 control-label">Usuario</label>
             <div class="col-md-10">
-                <input type="text" name="inputUsername" class="form-control" placeholder="Nombre de usuario"
+                <input style="width: 350px" type="text" name="inputUsername" class="form-control" placeholder="Nombre de usuario"
                     ng-model="username" ng-model-options="{ debounce: 500 }" minlength="3" maxlength="25"
                     pattern="^\S*$" autofocus>
-                   <button type="button" class="btn btn-sm btn-primary pull-right" ng-click="search()">Search</button>
+              <button style="box-shadow: 2px 2px 1px #34495e;" type="button" class="btn btn-sm btn-primary pull-right" ng-click="search()">Buscar</button>
+                   
                   
                 <!-- Errores -->
                 <span style="color:red" ng-show="formUser.inputUsername.$dirty && formUser.inputUsername.$invalid">

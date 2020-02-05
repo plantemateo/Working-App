@@ -41,7 +41,10 @@ input{
 }
 
 .styletext {
-  color: black;
+  color: #323792;
+  font-style: normal;
+  font-size: 32px;
+  text-shadow:0.5px 0.5px 1px black;
 }
 
 body.ng-scope div.modal-backdrop {
@@ -363,6 +366,7 @@ div.ng-scope div#card-modal div.modal-body .comment-section {
   font-size: 15px;
   padding: 5px;
   margin-bottom: 0px;
+  color: black;
 }
 
 div.ng-scope div#card-modal div.modal-body .comment {

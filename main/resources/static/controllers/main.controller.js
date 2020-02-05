@@ -91,11 +91,11 @@ angular.module('frontend').controller('ModalBoardCtrl', function ($scope, $rootS
 		// # Swatch
 		swatch: true,
 		swatchPos: 'left',
-		swatchBootstrap: true,
-		// swatchOnly: true,
+		swatchBootstrap: false,
+		//swatchOnly: true,
 
 		// # Popup
-		round: true,
+		round: false,
 		inline: true,
 		horizontal: false
 	};

@@ -1,7 +1,7 @@
 angular.module('frontend').controller('ModalBoardMembersCtrl', function ($scope, $rootScope, $uibModalInstance, miembros, creador, userService) {
     $scope.miembros = miembros;
     $scope.creador = creador;
-    $scope.username = ""
+    $scope.username = "";
     $scope.found = true;
 
     $scope.search = function () {
