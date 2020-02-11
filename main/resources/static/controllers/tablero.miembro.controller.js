@@ -13,14 +13,21 @@ angular.module('frontend').controller('ModalBoardMembersCtrl', function ($scope,
             if (!contains) {
                 userService.cargarPorUsernameOrEmail($scope.username).then(
                     function (resp) {
-                        $scope.miembros.push(resp.data[0]);
-                        $scope.found = true;
+                    	user = $scope.username;
+                    	for (var i = 0; i < resp.data.length; i++){
+                    		if (resp.data[i].username == user){
+                    			$scope.miembros.push(resp.data[i]);
+                                $scope.found = true;
+                    		}
+                    	}
+                    	
                     },
                     function (err) {
                         if (err.status == 404) {
                             $scope.found = false;
                         } else {
                             $rootScope.openErrorModal(err);
+                            
                         }
                     }
                 );

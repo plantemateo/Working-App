@@ -1,5 +1,16 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700");
 
+.iframeYoutube{
+	border: 4px inset #7f8c8d;
+	box-shadow: 0.5px 0.5px 2px #34495e;
+}
+
+.loginData{
+	text-align: center; 
+	color: #3A61C5;
+	text-shadow:0.5px 0.5px 1px #3A61C5;
+}
+
 input::placeholder {
   color: black;
   font-size: 15px;
@@ -23,7 +34,7 @@ input{
   background-size: cover;
 }
 
-.fondoFlechas {
+.fondoYoutube {
   background-image: url(images/flechFondo.png);
   background-repeat: no-repeat;
 }

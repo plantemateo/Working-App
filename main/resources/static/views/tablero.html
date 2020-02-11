@@ -1,22 +1,25 @@
 <div id="lists-view" style="overflow: auto; width: 100%;">
     <div id="sidebar-wrapper" ng-class="sidebarVisible">
         <ul class="sidebar-nav">
-            <a style="box-shadow: 2px 2px 1px #34495e;" id="menu-close" class="btn btn-danger pull-right toggle" ng-click="toggleSidebar()"><i
-                   class="glyphicon glyphicon-remove"></i></a>
+            <a style="box-shadow: 2px 2px 1px #34495e;" id="menu-close" class="btn btn-default pull-right toggle"  ng-click="toggleSidebar()"><i
+                   class="glyphicon glyphicon-new-window"></i></a>
             <li class="sidebar-brand" >
                 <a style="font-style:italic;font-size:22px;text-shadow:0.5px 0.5px 1px black;color: #{{colorFondo}};">{{tablero.titulo}}</a>
                 <a style="border: 0.5px inset #9B9B9B"></a>
             </li>
+            <br>
            	<li ng-click="changeBoardConfig()">
-                <a>Cambiar configuracion del tablero</a>
+                <a class="fa fa-cogs">&nbsp;Cambiar configuracion del tablero</a>
             </li>
+             <br>
             <li ng-click="openMembers()">
-                <a>Anadir/Quitar usuarios</a>
+                <a class="fa fa-user-plus">&nbsp;Anadir/Quitar usuarios</a>
             </li>
+            <br>
             <li ng-click="deleteBoard()">
-                <a style="color: #e22200; font-weight: bold;">Eliminar tablero</a>
+                <a style="color: #e22200; font-weight: bold;" class="fa fa-trash">&nbsp;Eliminar tablero</a>
             </li>
-        </ul>
+        </ul> 	
     </div>
     <!-- Listas -->
     <div class="list-section">

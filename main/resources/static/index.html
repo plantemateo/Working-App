@@ -119,10 +119,10 @@
 							class="caret"></span></a>
 						<ul class="dropdown-menu" style="border: 2px inset #7f8c8d;">
 							<u style="color: black;font-style: oblique;" class="center-text">Bienvenido!</u>
-							<h5 style="text-align: center; color: #3A61C5">{{loginData.lastname}}
+							<h5 class="loginData">{{loginData.lastname}}
 								{{loginData.firstname}}</h5>
-							<li ng-click="openPerfil()"><a>Configuracion de perfil</a></li>
-							<li ng-click="logout()"><a style="color: tomato">Logout</a></li>
+							<li ng-click="openPerfil()"><a class="fa fa-cog">&nbsp;Configuracion de perfil</a></li>
+							<li ng-click="logout()"><a style="color: #e22200" class="fa fa-sign-out">&nbsp;Logout</a></li>
 						</ul></li>
 				</ul>
 			</div>
@@ -131,8 +131,8 @@
 		<!-- /.container-fluid -->
 	</nav>
 	<div ng-view="" style="background-color: #{{colorFondo}}"></div>
-	<div align="center" class="fondoFlechas" style="background-color: #{{colorFondo}};">
-		<iframe style="border: 3px inset #7f8c8d;" width="480" height="315" 
+	<div align="center" class="fondoYoutube" style="background-color: #{{colorFondo}};">
+		<iframe class="iframeYoutube" width="480" height="315" 
 			src="https://www.youtube.com/embed/videoseries?list=PLp98Bsc4G23Wh4rUYmGoNAbYaS1zkW2PO"
 			frameborder="0"
 			allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"

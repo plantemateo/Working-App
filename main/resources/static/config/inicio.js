@@ -9,6 +9,7 @@ angular.module('frontend')
 		coreService,
 		userService
 	) {
+
 		$rootScope.loginOpen = false;
 		$rootScope.openErrorModal = function (err) {
 			if (err.status != 401 && err.hasOwnProperty('data')) {
@@ -32,14 +33,22 @@ angular.module('frontend')
 		$rootScope.loginData = $localStorage.userdata;
 		if ($rootScope.loginData != undefined) {
 			userService.cargarPorUsernameOrEmail($rootScope.loginData.username).then(
-				function (resp) {
-					$rootScope.currentLoggedUser = resp.data[0];
+				function (resp) {							
+					user = $rootScope.loginData.username;
+					for (var i = 0; i < resp.data.length; i++) {
+						if (resp.data[i].username == user) {
+							$rootScope.currentLoggedUser = resp.data[i];	
+						}
+						
+					}
+					
 				},
 				function (err) {
 					$rootScope.openErrorModal(err);
 				}
 			);
 		}
+		
 		$rootScope.loggedIn = $localStorage.logged;
 
 		$rootScope.openLoginForm = function (size) {

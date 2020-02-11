@@ -1,7 +1,7 @@
 angular.module('frontend').controller('ConfigureController',
 		function($scope, userService, $rootScope, $uibModalInstance) {
-
-			$scope.modUser = {
+				
+		$scope.modifiUser = {
 				firstName : '',
 				lastName : '',
 				email : '',
@@ -9,9 +9,8 @@ angular.module('frontend').controller('ConfigureController',
 				password : ''
 
 			};
-
 			$scope.modPerfil = function() {
-				userService.agregar($scope.modUser).then(function() {
+				userService.actualizar($scope.modifiUser).then(function() {
 					$uibModalInstance.dismiss(true);
 					alert("SE HAN MODIFICADO LOS DATOS, POR FAVOR INGRESE NUEVAMENTE");
 					$rootScope.logout();
